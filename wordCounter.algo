@@ -1,0 +1,27 @@
+ALGORITHM wordCounter
+VAR 
+  //declare variables
+  charCount, wordCount, vowelCount: INTEGER;
+  vowels: ARRAY_OF type[5];
+  sentence, word: STRING;
+BEGIN
+  charCount, wordCount, vowelCount := 0;
+  vowels := ['a', 'e', 'i', 'o', 'u'];
+  sentence := ('The quick brown fox jumped over the lazy dog.');
+  words := sentence.split(' ') 
+   
+  FOR x FROM 0 TO (words.length)-1 STEP x++  DO
+    wordCount++;
+  END_FOR
+  FOR y FROM 0 TO (sentence.length)-1 STEP y++  DO
+    charCount++;
+    FOR z FROM 0 TO (vowels.length)-1 STEP z++  DO
+      IF (sentence[i] === vowels[j]) THEN
+        vowelCount++;
+      END_IF
+    END_FOR
+  END_FOR
+      
+  write("The number of words in the given sentence is: ", wordCount)
+  write("The number of words in the given sentence is: ", charCount)
+  write("The number of words in the given sentence is: ", vowelCount)
