@@ -12,7 +12,7 @@ Install at least one code editor preferrably Microsoft Visual Studio Code.
 Install Goodle Chrome.
 
 ## Live Preview
-- Live Preview: [Link](https://github.com/emmaonyi2023/algorithmCheckpoint/)
+- Live Preview: [Link](https://github.com/emmaonyi2023/algorithmCheckpoint/blob/main/wordCounter.algo)
 
 ## Author
 **Emmanuel Okereke**
