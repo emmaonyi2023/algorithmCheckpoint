@@ -5,23 +5,30 @@ VAR
   vowels: ARRAY_OF type[5];
   sentence, word: STRING;
 BEGIN
+  //initialize variables
   charCount, wordCount, vowelCount := 0;
   vowels := ['a', 'e', 'i', 'o', 'u'];
   sentence := ('The quick brown fox jumped over the lazy dog.');
-  words := sentence.split(' ') 
-   
+  words := sentence.split(' ');
+
+  //for loop to count words
   FOR x FROM 0 TO (words.length)-1 STEP x++  DO
     wordCount++;
   END_FOR
+
+  //for loop to count characters in sentence
   FOR y FROM 0 TO (sentence.length)-1 STEP y++  DO
     charCount++;
+    //for loop to count vowels in sentence
     FOR z FROM 0 TO (vowels.length)-1 STEP z++  DO
+      //if statement to compare value and type of element in the sentence string against vowel string
       IF (sentence[i] === vowels[j]) THEN
         vowelCount++;
       END_IF
     END_FOR
   END_FOR
-      
-  write("The number of words in the given sentence is: ", wordCount)
-  write("The number of words in the given sentence is: ", charCount)
-  write("The number of words in the given sentence is: ", vowelCount)
+  
+  //print out answers
+  write("The number of words in the given sentence is: ", wordCount);
+  write("The number of words in the given sentence is: ", charCount);
+  write("The number of words in the given sentence is: ", vowelCount);
